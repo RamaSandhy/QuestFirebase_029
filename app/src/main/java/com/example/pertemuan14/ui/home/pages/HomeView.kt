@@ -43,8 +43,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.pertemuan13.ui.PenyediaViewModel
 import com.example.pertemuan14.Model.Mahasiswa
-import com.example.pertemuan14.ui.PenyediaViewModel
 import com.example.pertemuan14.ui.home.viewmodel.HomeUiState
 import com.example.pertemuan14.ui.home.viewmodel.HomeViewModel
 
@@ -54,7 +54,7 @@ fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     modifier: Modifier = Modifier,
     onDetailClick: (String) -> Unit = {},
-    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.factory)
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ){
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
     Scaffold (
