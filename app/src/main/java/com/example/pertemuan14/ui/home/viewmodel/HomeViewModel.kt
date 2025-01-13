@@ -7,13 +7,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pertemuan14.Model.Mahasiswa
 import com.example.pertemuan14.repository.NetworkRepositoryMhs
+import com.example.pertemuan14.repository.RepositoryMhs
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import kotlin.jvm.Throws
 
 class HomeViewModel(
-    private val repositoryMhs: NetworkRepositoryMhs
+    private val repositoryMhs: RepositoryMhs
 ): ViewModel() {
     var mhsUiState: HomeUiState by mutableStateOf(HomeUiState.Loading)
         private set
