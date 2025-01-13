@@ -8,9 +8,9 @@ import com.example.pertemuan14.MahasiswaApp
 import com.example.pertemuan14.ui.home.viewmodel.HomeViewModel
 object PenyediaViewModel{
     val Factory = viewModelFactory {
-        initializer { HomeViewModel(MahasiswaApp().container.repositoryMhs) }
+        initializer { HomeViewModel(mahasiswaApp().container.repositoryMhs) }
     }
 }
 
-fun CreationExtras.MahasiswaApp(): MahasiswaApp =
+fun CreationExtras.mahasiswaApp(): MahasiswaApp =
     (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as MahasiswaApp)
