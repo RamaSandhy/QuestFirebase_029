@@ -50,3 +50,14 @@ sealed class HomeUiState{
 
     data class Error(val e: Throwable) : HomeUiState()
 }
+
+fun deleteMhs(mahasiswa: Mahasiswa) {
+    viewModelScope.launch {
+        try {
+            mhs.deleteMhs (mahasiswa)
+
+        } catch (e: Exception) {
+            mhsUIState = HomeUiState.Error(e)
+        }
+    }
+}
