@@ -10,3 +10,4 @@ class Mahasiswa (
 ){
     constructor() : this("", "", "", "", "","")
 }
+
